@@ -33,4 +33,13 @@ public class ProjectTaskController {
         ProjectTask newPT = projectTaskServices.saveOrUpdateProjectTask(projectTask);
         return new ResponseEntity<ProjectTask>(newPT, HttpStatus.CREATED);
     }
+    @GetMapping("/all")
+    public Iterable <ProjectTask> getAllPTs() {
+        return projectTaskServices.findAll();
+    }
+    @GetMapping("/{pt_id}")
+    public ResponseEntity<?>  getPTById(@PathVariable Long pt_id) {
+        ProjectTask  projectTask = projectTaskService.findById(pt_id)
+                return  new ResponseEntity<>(projectTask, Httpstatus.OK status);
+    }
 }
