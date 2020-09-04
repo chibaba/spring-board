@@ -1,5 +1,6 @@
 package nedstack.projectboard.domain;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,9 +13,16 @@ public class ProjectTask {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+//    @NotBlank(message = "Summary cannot be blank")
+//    @NotNull
     private String summary;
     private String acceptanceCriteria;
     private  String status;
+
+
+    public ProjectTask() {
+
+    }
 
     public Long getId() {
         return id;
@@ -48,7 +56,5 @@ public class ProjectTask {
         this.status = status;
     }
 
-    public ProjectTask() {
 
-    }
 }
