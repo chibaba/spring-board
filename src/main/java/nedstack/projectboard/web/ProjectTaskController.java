@@ -39,7 +39,7 @@ public class ProjectTaskController {
     }
     @GetMapping("/{pt_id}")
     public ResponseEntity<?>  getPTById(@PathVariable Long pt_id) {
-        ProjectTask  projectTask = projectTaskService.findById(pt_id)
-                return  new ResponseEntity<>(projectTask, Httpstatus.OK status);
+        ProjectTask  projectTask = projectTaskServices.findById(pt_id);
+                return  new ResponseEntity<ProjectTask>(projectTask, HttpStatus.OK);
     }
 }
