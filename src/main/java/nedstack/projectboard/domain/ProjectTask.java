@@ -13,5 +13,5 @@ public class ProjectTask {
     private Long id;
 
     private String summary;
-    private String acceptanceCriteria
+    private String acceptanceCriteria;
 }
